@@ -9,6 +9,7 @@ echo "<p>$intro" . "<br>" .
 $line1 . "</p>" . 
 
 "<p class = {$class['paragraph']} >" $line2 ". </p>";
+//not finished
 
 ?>
 
