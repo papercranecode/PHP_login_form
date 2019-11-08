@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<meta charset="utf-8">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  
+	<body>
+
+    <?php
+
+    $inputOne = $_POST['valueOne'];
+    $inputTwo = $_POST['valueTwo'];
+
+    if ($_POST['input'] == 'add') {
+    echo $inputOne + $inputTwo;
+    }
+
+    else if ($_POST['input'] == 'subtract') {
+    echo $inputOne - $inputTwo;
+    }
+
+    else if ($_POST['input'] == 'multiply') {
+    echo $inputOne * $inputTwo;
+    } 
+
+    else if ($_POST['input'] == 'divide') {
+    echo $inputOne / $inputTwo;
+    }
+
+    ?>
+
+    <!-- This is the form -->
+    <form action="calculator.php" method="POST">
+        <input type="number" name="valueOne" value="input">
+        <select name="dropdown">
+            <option value="add">&#43;</option>
+            <option value="subtract">&#8722;</option>
+            <option value="multiply">&#215;</option>
+            <option value="divide">&#247;</option>
+          </select>
+        <input type="number" name="valueTwo" value="input">
+        <br />
+        <input type="submit" value="Calculate!" class="btn btn-primary">
+        <br />
+        <p>Result:</p>
+        <input type="result" readonly="readonly" value="<?php echo input ?>"></input>
+    </form>
+
+  </body>
+</html>
