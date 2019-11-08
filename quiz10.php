@@ -6,9 +6,10 @@ $line2 = 'This is line 2';
 
 echo "<p>$intro" . "<br>" .
 
-$line1 . "</p>" .
+$line1 . "</p>" . 
 
-"<p class = $class['paragraph']>" $line2 ". </p>"; 
+"<p class = {$class['paragraph']} >" $line2 ". </p>";
+
 ?>
 
 <script type="text/javascript">

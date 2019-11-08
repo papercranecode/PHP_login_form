@@ -5,8 +5,10 @@ $intro = 'hello';
 $line1 = 'This is line 1';
 $line2 = 'This is line 2';
 
-echo "<p>$intro" . "<br>" . $line1 . "</p>";
+echo "<p>$intro" . "<br>" .
 
-echo "<p class = $class['paragraph'] >" $line2 ". </p>";
+$line1 . "</p>" . 
+
+"<p class = {$class['paragraph']} >" $line2 ". </p>";
 
 ?>
